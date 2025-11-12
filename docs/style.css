@@ -72,6 +72,8 @@ nav ul li a:hover {
 
 .hero p {
   font-size: 1.2em;
+  margin-left: 0px;
+  text-align: left;
 }
 
 /* =====================================================
@@ -102,8 +104,8 @@ section {
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
 }
 
 .card h3 {
@@ -165,6 +167,11 @@ body.dark-mode a {
 body.dark-mode #tecnologias {
   background-color: #161b22; /* fundo escuro */
   color: white;
+}
+
+body.dark-mode #tecnologias .card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(88, 166, 255, 0.3);
 }
 
 /* Ajuste visual dos cards no dark mode */
