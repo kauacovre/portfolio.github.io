@@ -1,2 +1,2 @@
 # Portifólio
-Site desenvolvido com foco em aprendizado e crescimento, criei ele com o intuito de me apresentar um pouco e mostrar mais do meu trabalho e constante esforço e dedicação na área.
+This site was developed with a focus on learning and growth. I created it to introduce myself a little and show more of my work, constant effort, and dedication in the field.
