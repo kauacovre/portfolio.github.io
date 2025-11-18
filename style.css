@@ -1,6 +1,3 @@
-/* =====================================================
-   RESET BÁSICO E CONFIGURAÇÕES GERAIS
-   ===================================================== */
 * {
   margin: 0;
   padding: 0;
@@ -10,14 +7,11 @@
 }
 
 body {
-  background-color: #f4f4f4; /* fundo claro padrão */
-  color: #333; /* texto padrão */
+  background-color: #f4f4f4; 
+  color: #333; 
   line-height: 1.6;
 }
 
-/* =====================================================
-   CABEÇALHO E NAVEGAÇÃO
-   ===================================================== */
 header {
   background-color: #0d1117;
   color: #fff;
@@ -55,9 +49,6 @@ nav ul li a:hover {
   color: #58a6ff;
 }
 
-/* =====================================================
-   SEÇÃO HERO (INTRODUÇÃO)
-   ===================================================== */
 .hero {
   background: linear-gradient(to right, #0d1117, #1f2937);
   color: white;
@@ -76,18 +67,12 @@ nav ul li a:hover {
   text-align: left;
 }
 
-/* =====================================================
-   SEÇÕES GERAIS
-   ===================================================== */
 section {
   padding: 60px 20px;
   max-width: 1000px;
   margin: 0 auto;
 }
 
-/* =====================================================
-   TECNOLOGIAS E CARDS
-   ===================================================== */
 #tecnologias .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -113,9 +98,6 @@ section {
   margin-bottom: 10px;
 }
 
-/* =====================================================
-   RODAPÉ
-   ===================================================== */
 footer {
   background-color: #0d1117;
   color: #ccc;
@@ -132,9 +114,6 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* =====================================================
-   RESPONSIVIDADE
-   ===================================================== */
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;
@@ -151,21 +130,17 @@ footer a:hover {
   }
 }
 
-/* =====================================================
-   TEMA ESCURO (DARK MODE)
-   ===================================================== */
 body.dark-mode {
-  background-color: #0d1117; /* fundo geral escuro */
-  color: white; /* texto claro */
+  background-color: #0d1117; 
+  color: white; 
 }
 
 body.dark-mode a {
-  color: #58a6ff; /* links no dark mode */
+  color: #58a6ff; 
 }
 
-/* Ajustes específicos para a section de tecnologias */
 body.dark-mode #tecnologias {
-  background-color: #161b22; /* fundo escuro */
+  background-color: #161b22;
   color: white;
 }
 
@@ -174,17 +149,17 @@ body.dark-mode #tecnologias .card:hover {
   box-shadow: 0 12px 24px rgba(88, 166, 255, 0.3);
 }
 
-/* Ajuste visual dos cards no dark mode */
+
 body.dark-mode #tecnologias .card {
-  background-color: #21262d; /* fundo do card */
+  background-color: #21262d; 
   border: 1px solid #30363d;
   color: white;
 }
 
 body.dark-mode #tecnologias .card h3 {
-  color: #58a6ff; /* título com destaque */
+  color: #58a6ff; 
 }
 
 body.dark-mode #tecnologias .card p {
-  color: #c9d1d9; /* texto mais claro */
+  color: #c9d1d9; 
 }
