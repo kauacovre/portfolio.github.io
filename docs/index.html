@@ -4,321 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portfólio • Kauã Covre Martins</title>
-  <meta name="description" content="Portfólio de Kauã Covre Martins — Desenvolvedor Web. Projetos, habilidades e contato." />
-
-  <style>
-    :root{
-      --bg: #0b0f1a;
-      --panel: rgba(255,255,255,.06);
-      --panel2: rgba(255,255,255,.09);
-      --text: rgba(255,255,255,.92);
-      --muted: rgba(255,255,255,.68);
-      --line: rgba(255,255,255,.12);
-      --shadow: 0 20px 60px rgba(0,0,0,.45);
-      --radius: 18px;
-      --radius2: 26px;
-      --max: 1120px;
-
-      /* Você pode trocar essas duas cores pra “sua” identidade */
-      --a: #7c3aed;   /* roxo */
-      --b: #22c55e;   /* verde */
-    }
-
-    *{ box-sizing:border-box; }
-    html{ scroll-behavior:smooth; }
-    body{
-      margin:0;
-      color:var(--text);
-      font: 16px/1.55 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background:
-        radial-gradient(900px 420px at 15% 0%, rgba(124,58,237,.25), transparent 55%),
-        radial-gradient(700px 340px at 85% 10%, rgba(34,197,94,.18), transparent 55%),
-        radial-gradient(900px 600px at 50% 90%, rgba(124,58,237,.10), transparent 60%),
-        var(--bg);
-      overflow-x:hidden;
-    }
-    a{ color:inherit; text-decoration:none; }
-    img{ max-width:100%; display:block; }
-
-    /* Layout */
-    .container{ width:min(var(--max), calc(100% - 40px)); margin:0 auto; }
-    .section{ padding: 88px 0; position:relative; }
-    .grid{ display:grid; gap:18px; }
-    .two{ grid-template-columns: 1.15fr .85fr; }
-    @media (max-width: 900px){
-      .two{ grid-template-columns: 1fr; }
-      .section{ padding: 74px 0; }
-    }
-
-    /* Navbar */
-    .nav{
-      position:sticky; top:0; z-index:50;
-      backdrop-filter: blur(12px);
-      background: rgba(11,15,26,.6);
-      border-bottom: 1px solid var(--line);
-    }
-    .nav-inner{
-      display:flex; align-items:center; justify-content:space-between;
-      padding: 14px 0;
-      gap: 16px;
-    }
-    .brand{
-      display:flex; align-items:center; gap:10px;
-      font-weight:800;
-      letter-spacing:.3px;
-    }
-    .dot{
-      width:12px; height:12px; border-radius:999px;
-      background: linear-gradient(135deg, var(--a), var(--b));
-      box-shadow: 0 0 0 4px rgba(124,58,237,.18);
-    }
-    .links{ display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-end; }
-    .links a{
-      padding: 8px 10px;
-      color: var(--muted);
-      border-radius: 12px;
-      border: 1px solid transparent;
-    }
-    .links a:hover{
-      color: var(--text);
-      border-color: var(--line);
-      background: rgba(255,255,255,.04);
-    }
-    .cta{
-      display:inline-flex; align-items:center; gap:10px;
-      padding: 10px 14px;
-      border-radius: 14px;
-      font-weight:700;
-      border: 1px solid rgba(255,255,255,.14);
-      background: linear-gradient(135deg, rgba(124,58,237,.22), rgba(34,197,94,.14));
-      box-shadow: 0 12px 30px rgba(0,0,0,.28);
-    }
-    .cta:hover{ transform: translateY(-1px); }
-    .mini{
-      width:36px; height:36px; border-radius: 14px;
-      display:grid; place-items:center;
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.04);
-    }
-
-    /* Cards */
-    .card{
-      border-radius: var(--radius2);
-      background: var(--panel);
-      border: 1px solid var(--line);
-      box-shadow: var(--shadow);
-    }
-    .card.pad{ padding: 18px; }
-    .card.pad-lg{ padding: 24px; }
-    .card:hover{
-      background: rgba(255,255,255,.075);
-      border-color: rgba(255,255,255,.18);
-    }
-
-    /* Tipografia */
-    .kicker{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      padding: 7px 12px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,.14);
-      background: rgba(255,255,255,.04);
-      color: var(--muted);
-      font-weight:650;
-      letter-spacing:.2px;
-    }
-    h1{
-      margin: 14px 0 12px;
-      font-size: clamp(2.1rem, 4vw, 3.3rem);
-      line-height: 1.08;
-      letter-spacing: -0.02em;
-    }
-    h2{
-      margin:0 0 10px;
-      font-size: clamp(1.5rem, 2.2vw, 2rem);
-      letter-spacing: -0.01em;
-    }
-    p{ margin:0 0 12px; color: var(--muted); }
-    .lead{ font-size: 1.08rem; color: rgba(255,255,255,.80); }
-
-    /* Hero */
-    .hero{
-      padding: 56px 0 40px;
-    }
-    .hero .panel{
-      padding: 26px;
-      border-radius: 28px;
-      background:
-        radial-gradient(600px 260px at 0% 0%, rgba(124,58,237,.25), transparent 50%),
-        radial-gradient(520px 280px at 100% 0%, rgba(34,197,94,.18), transparent 55%),
-        rgba(255,255,255,.05);
-      border: 1px solid rgba(255,255,255,.14);
-      box-shadow: var(--shadow);
-    }
-    .hero-actions{
-      display:flex; gap:12px; flex-wrap:wrap;
-      margin-top: 18px;
-    }
-    .btn{
-      display:inline-flex; align-items:center; gap:10px;
-      padding: 11px 14px;
-      border-radius: 14px;
-      border: 1px solid rgba(255,255,255,.14);
-      background: rgba(255,255,255,.04);
-      color: var(--text);
-      font-weight: 700;
-    }
-    .btn:hover{ background: rgba(255,255,255,.07); transform: translateY(-1px); }
-    .btn.primary{
-      background: linear-gradient(135deg, rgba(124,58,237,.28), rgba(34,197,94,.18));
-    }
-    .badges{ display:flex; gap:10px; flex-wrap:wrap; margin-top: 16px; }
-    .badge{
-      padding: 7px 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.03);
-      color: rgba(255,255,255,.78);
-      font-weight: 650;
-      font-size: .92rem;
-    }
-    .stats{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-      margin-top: 18px;
-    }
-    @media (max-width: 520px){
-      .stats{ grid-template-columns: 1fr; }
-    }
-    .stat{
-      padding: 14px;
-      border-radius: 18px;
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.03);
-    }
-    .stat strong{ display:block; font-size: 1.1rem; }
-    .stat span{ color: var(--muted); font-size: .95rem; }
-
-    /* Skills */
-    .skills{ grid-template-columns: repeat(3, 1fr); }
-    @media (max-width: 900px){ .skills{ grid-template-columns: 1fr; } }
-    .skill{
-      padding: 16px;
-      border-radius: 18px;
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.03);
-    }
-    .skill h3{ margin:0 0 6px; font-size: 1.02rem; }
-    .skill p{ margin:0; font-size: .98rem; }
-
-    /* Projetos */
-    .projects{
-      grid-template-columns: repeat(3, 1fr);
-      align-items: stretch;
-    }
-    @media (max-width: 1000px){ .projects{ grid-template-columns: 1fr; } }
-
-    .project{
-      display:flex; flex-direction:column; gap:12px;
-      padding: 18px;
-      border-radius: 22px;
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.03);
-      min-height: 260px;
-    }
-    .thumb{
-      height: 140px;
-      border-radius: 18px;
-      border: 1px solid rgba(255,255,255,.12);
-      background:
-        linear-gradient(135deg, rgba(124,58,237,.22), rgba(34,197,94,.12));
-      position:relative;
-      overflow:hidden;
-    }
-    .thumb::after{
-      content:"";
-      position:absolute; inset:-40px;
-      background: radial-gradient(circle at 20% 20%, rgba(255,255,255,.18), transparent 40%);
-      transform: rotate(10deg);
-    }
-    .project h3{ margin: 0; font-size: 1.08rem; }
-    .meta{ display:flex; gap:10px; flex-wrap:wrap; }
-    .tag{
-      font-size: .86rem;
-      color: rgba(255,255,255,.78);
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.03);
-      padding: 5px 9px;
-      border-radius: 999px;
-    }
-    .project .links2{
-      margin-top:auto;
-      display:flex; gap:10px; flex-wrap:wrap;
-    }
-    .linkbtn{
-      display:inline-flex; align-items:center; gap:8px;
-      padding: 9px 12px;
-      border-radius: 14px;
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.03);
-      font-weight: 700;
-      color: rgba(255,255,255,.86);
-    }
-    .linkbtn:hover{ background: rgba(255,255,255,.06); }
-
-    /* Depoimentos */
-    .quotes{ grid-template-columns: repeat(3, 1fr); }
-    @media (max-width: 1000px){ .quotes{ grid-template-columns: 1fr; } }
-    blockquote{
-      margin:0;
-      padding: 18px;
-      border-radius: 22px;
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.03);
-    }
-    blockquote p{ margin:0 0 12px; }
-    blockquote footer{ color: var(--muted); font-weight: 650; }
-
-    /* Contato */
-    form{ display:grid; gap:12px; }
-    .row2{ display:grid; gap:12px; grid-template-columns: 1fr 1fr; }
-    @media (max-width: 700px){ .row2{ grid-template-columns: 1fr; } }
-    input, textarea{
-      width:100%;
-      padding: 12px 12px;
-      border-radius: 14px;
-      border: 1px solid rgba(255,255,255,.14);
-      background: rgba(0,0,0,.22);
-      color: var(--text);
-      outline: none;
-    }
-    input:focus, textarea:focus{
-      border-color: rgba(124,58,237,.55);
-      box-shadow: 0 0 0 4px rgba(124,58,237,.18);
-    }
-    textarea{ min-height: 120px; resize: vertical; }
-
-    .footer{
-      padding: 30px 0 44px;
-      border-top: 1px solid var(--line);
-      color: var(--muted);
-    }
-
-    /* Wireframe mockup (SVG container) */
-    .mock{
-      border-radius: 22px;
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.03);
-      overflow:hidden;
-    }
-
-    /* Util */
-    .muted{ color: var(--muted); }
-    .split{ display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; }
-    .hr{ height:1px; background: var(--line); margin: 18px 0; }
-  </style>
+  <meta name="description" content="Portfólio de Kauã Covre Martins — Desenvolvedor. Projetos, habilidades e contato." />
+  <link rel="stylesheet" href="/docs/style.css" />
 </head>
 
 <body>
@@ -335,7 +22,7 @@
         <a href="#skills">Tecnologias</a>
         <a href="#projetos">Projetos</a>
         <a href="#contato">Contato</a>
-        <a class="cta" href="#projetos">
+        <a class="cta" href="https://github.com/kauacovre">
           <span>Ver Projetos</span>
           <span aria-hidden="true">→</span>
         </a>
@@ -350,7 +37,7 @@
         <div class="grid two" style="align-items:center;">
           <div>
             <span class="kicker">👋 Olá! Eu sou Kauã Covre Martins</span>
-            <h1>Desenvolvedor Web focado em criar experiências <span style="color:rgba(255,255,255,.98)">rápidas</span>, <span style="color:rgba(255,255,255,.98)">responsivas</span> e <span style="color:rgba(255,255,255,.98)">bem construídas</span>.</h1>
+            <h1>Desenvolvedor. Focado em criar experiências <span style="color:rgba(255,255,255,.98)">rápidas</span>, <span style="color:rgba(255,255,255,.98)">responsivas</span> e <span style="color:rgba(255,255,255,.98)">bem construídas</span>.</h1>
             <p class="lead">
               Construo aplicações e sites com <strong>código limpo</strong>, atenção a detalhes e foco no que entrega valor.
               Aqui você encontra meus projetos, stack e formas de contato.
@@ -358,11 +45,11 @@
 
             <div class="hero-actions">
               <a class="btn primary" href="#projetos">🚀 Ver Projetos</a>
-              <a class="btn" href="#contato">📩 Falar comigo</a>
+              <a class="btn" href="mailto:kauacovre222@gmail.com">📩 Falar comigo</a>
 
               <!-- Troque # pelos seus links -->
-              <a class="btn" href="#" target="_blank" rel="noopener">GitHub</a>
-              <a class="btn" href="#" target="_blank" rel="noopener">LinkedIn</a>
+              <a class="btn" href="https://github.com/kauacovre" target="_blank" rel="noopener">GitHub</a>
+              <a class="btn" href="https://www.linkedin.com/in/kau%C3%A3-martins/" target="_blank" rel="noopener">LinkedIn</a>
             </div>
 
             <div class="badges" aria-label="Tecnologias principais">
@@ -440,7 +127,7 @@
         <div class="card pad-lg">
           <h2>Sobre</h2>
           <p class="lead">
-            Sou desenvolvedor web apaixonado por tecnologia e por aprender continuamente.
+            Sou Desenvolvedor, apaixonado por tecnologia e por aprender continuamente.
             Busco criar soluções que sejam <strong>simples</strong>, <strong>bem organizadas</strong> e com ótima experiência de uso.
           </p>
           <div class="hr"></div>
@@ -486,7 +173,7 @@
           <h2>Tecnologias</h2>
           <p class="muted">Uma stack enxuta e eficiente para entregar projetos do jeito certo.</p>
         </div>
-        <a class="btn" href="#contato">📄 Baixar currículo</a>
+        <a class="btn" href="/docs/assets/CV_DevKauã.pdf">📄 Baixar currículo</a>
       </div>
 
       <div class="grid skills" style="margin-top:18px;">
@@ -555,13 +242,16 @@
           <h2>Projetos</h2>
           <p class="muted">Cards com contexto, stack e links (GitHub e demo).</p>
         </div>
-        <span class="kicker">✨ Dica: adicione screenshots reais nos thumbs</span>
+        <span class="kicker">✨ Feito com muita dedicação e carinho</span>
       </div>
 
       <div class="grid projects" style="margin-top:18px;">
         <!-- PROJETO 1 -->
         <article class="project">
-          <div class="thumb" aria-hidden="true"></div>
+          <video controls style="width: 100%; margin-top: 10px;">
+            <source src="assets/Reader_py.mp4" type="video/mp4">
+            Seu navegador não suporta o elemento de vídeo.
+          </video>
           <div class="meta">
             <span class="tag">Python</span>
             <span class="tag">API</span>
@@ -570,14 +260,17 @@
           <h3>Leitor e Resumidor de Vídeo com IA</h3>
           <p>Recebe vídeo/URL, extrai áudio e gera resumo para consumo rápido de conteúdo longo.</p>
           <div class="links2">
-            <a class="linkbtn" href="#" target="_blank" rel="noopener">GitHub</a>
-            <a class="linkbtn" href="#" target="_blank" rel="noopener">Demo</a>
+            <a class="linkbtn" href="https://github.com/kauacovre/script" target="_blank" rel="noopener">GitHub</a>
+            <a class="linkbtn" href="https://www.linkedin.com/feed/update/urn:li:activity:7361420451488677890/" target="_blank" rel="noopener">Demo</a>
           </div>
         </article>
 
         <!-- PROJETO 2 -->
         <article class="project">
-          <div class="thumb" aria-hidden="true"></div>
+          <video controls style="width: 100%; margin-top: 10px;">
+            <source src="assets/S.I_video ‐ Feito com o Clipchamp.mp4" type="video/mp4">
+            Seu navegador não suporta o elemento de vídeo.
+          </video>
           <div class="meta">
             <span class="tag">HTML</span>
             <span class="tag">CSS</span>
@@ -586,53 +279,29 @@
           <h3>Landing Page — Alinhamento e Balanceamento</h3>
           <p>Site institucional responsivo com foco em serviços, CTA e contato rápido.</p>
           <div class="links2">
-            <a class="linkbtn" href="#" target="_blank" rel="noopener">GitHub</a>
-            <a class="linkbtn" href="#" target="_blank" rel="noopener">Demo</a>
+            <a class="linkbtn" href="https://github.com/kauacovre/project_S.I" target="_blank" rel="noopener">GitHub</a>
+            <a class="linkbtn" href="https://www.linkedin.com/feed/update/urn:li:activity:7332183902217744384/" target="_blank" rel="noopener">Demo</a>
           </div>
         </article>
 
         <!-- PROJETO 3 -->
         <article class="project">
-          <div class="thumb" aria-hidden="true"></div>
+          <video controls style="width: 100%; margin-top: 10px;">
+            <source src="assets/script.mp4" type="video/mp4">
+            Seu navegador não suporta o elemento de vídeo.
+          </video>
           <div class="meta">
-            <span class="tag">Node.js</span>
-            <span class="tag">MySQL</span>
-            <span class="tag">CRUD</span>
+            <span class="tag">Bachfile</span>
+            <span class="tag">Powershell</span>
+            <span class="tag">Automação</span>
           </div>
-          <h3>Sistema CRUD — Exemplo</h3>
-          <p>Cadastro, listagem e edição com banco de dados e rotas bem definidas.</p>
+          <h3>Script de Automação</h3>
+          <p>Automatizando pós formatação de notebooks e computadores</p>
           <div class="links2">
-            <a class="linkbtn" href="#" target="_blank" rel="noopener">GitHub</a>
-            <a class="linkbtn" href="#" target="_blank" rel="noopener">Demo</a>
+            <a class="linkbtn" href="https://github.com/kauacovre/script" target="_blank" rel="noopener">GitHub</a>
+            <a class="linkbtn" href="https://www.linkedin.com/feed/update/urn:li:activity:7406697055609585664/" target="_blank" rel="noopener">Demo</a>
           </div>
         </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- DEPOIMENTOS (opcional) -->
-  <section class="section" aria-label="Depoimentos">
-    <div class="container">
-      <div class="split">
-        <div>
-          <h2>Provas sociais</h2>
-          <p class="muted">Opcional, mas aumenta confiança. Troque por depoimentos reais quando tiver.</p>
-        </div>
-      </div>
-
-      <div class="grid quotes" style="margin-top:18px;">
-        <blockquote>
-          <p>“Entrega rápida, comunicação clara e resultado acima do esperado.”</p>
-          <footer>— Cliente • Projeto X</footer>
-        </blockquote>
-        <blockquote>
-          <p>“Organizado e atento a detalhes, o layout ficou muito profissional.”</p>
-          <footer>— Colega • Time Y</footer>
-        </blockquote>
-        <blockquote>
-          <p>“Resolve problemas com autonomia e sempre propõe melhorias.”</p>
-          <footer>— Mentor • Feedback</footer>
-        </blockquote>
       </div>
     </div>
   </section>
@@ -650,21 +319,59 @@
             <div class="row2">
               <label>
                 <span class="muted">Nome</span>
-                <input name="name" autocomplete="name" placeholder="Seu nome" required />
+                <input id="name" name="name" autocomplete="name" placeholder="Seu nome" required />
               </label>
               <label>
                 <span class="muted">Email</span>
-                <input name="email" type="email" autocomplete="email" placeholder="seuemail@exemplo.com" required />
+                <input id="email" name="email" type="email" autocomplete="email" placeholder="seuemail@exemplo.com" required />
               </label>
             </div>
             <label>
               <span class="muted">Mensagem</span>
-              <textarea name="message" placeholder="Escreva sua mensagem..." required></textarea>
+              <textarea id="message" name="message" placeholder="Escreva sua mensagem..." required></textarea>
             </label>
 
             <button class="btn primary" type="submit">📨 Enviar</button>
             <p class="muted" id="formHint" style="margin:0;"></p>
           </form>
+          
+          <script>
+            document.getElementById('contactForm').addEventListener('submit', function(e) {
+              e.preventDefault();
+              
+              const name = document.getElementById('name').value;
+              const email = document.getElementById('email').value;
+              const message = document.getElementById('message').value;
+              
+              // Cria o corpo do email
+              const subject = encodeURIComponent(`Contato pelo portfólio — ${name}`);
+              const body = encodeURIComponent(
+                `Nome: ${name}\n` +
+                `Email: ${email}\n` +
+                `Mensagem:\n${message}`
+              );
+              
+              // Abre o Gmail em nova aba
+              const mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&to=kauacovre222@gmail.com&su=${subject}&body=${body}`;
+              window.open(mailtoLink, '_blank');
+              
+              // Limpa o formulário
+              document.getElementById('contactForm').reset();
+              
+              // Mostra mensagem de sucesso
+              const hint = document.getElementById('formHint');
+              hint.textContent = "✅ Mensagem enviada com sucesso!";
+              hint.style.color = "#22c55e";
+              hint.style.fontWeight = "600";
+              
+              // Remove a mensagem após 4 segundos
+              setTimeout(() => {
+                hint.textContent = "";
+                hint.style.color = "";
+                hint.style.fontWeight = "";
+              }, 4000);
+            });
+          </script>
         </div>
 
         <div class="card pad-lg">
@@ -672,16 +379,13 @@
           <p class="muted">Troque os links abaixo pelos seus perfis reais.</p>
 
           <div class="grid" style="gap:12px; margin-top:14px;">
-            <a class="linkbtn" href="#" target="_blank" rel="noopener">GitHub</a>
-            <a class="linkbtn" href="#" target="_blank" rel="noopener">LinkedIn</a>
-            <a class="linkbtn" href="mailto:seuemail@exemplo.com">Email</a>
-            <a class="linkbtn" href="#" download>Baixar Currículo (PDF)</a>
+            <a class="linkbtn" href="https://github.com/kauacovre" target="_blank" rel="noopener">GitHub</a>
+            <a class="linkbtn" href="https://www.linkedin.com/in/kau%C3%A3-martins/" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="linkbtn" href="mailto:kauacovre222@gmail.com">Email</a>
+            <a class="linkbtn" href="assets/CV_DevKauã.pdf" download>Baixar Currículo (PDF)</a>
           </div>
 
           <div class="hr"></div>
-          <p class="muted" style="margin:0;">
-            📍 Dica: se você hospeda no GitHub Pages, coloque seu currículo em <code>/assets/cv.pdf</code> e linke ali.
-          </p>
         </div>
       </div>
     </div>
@@ -697,29 +401,6 @@
   <script>
     // Ano automático
     document.getElementById("year").textContent = new Date().getFullYear();
-
-    // Form: por padrão abre email com mailto (sem backend)
-    const form = document.getElementById("contactForm");
-    const hint = document.getElementById("formHint");
-
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-
-      const data = new FormData(form);
-      const name = (data.get("name") || "").toString().trim();
-      const email = (data.get("email") || "").toString().trim();
-      const message = (data.get("message") || "").toString().trim();
-
-      // Troque para seu email real:
-      const to = "seuemail@exemplo.com";
-      const subject = encodeURIComponent(`Contato pelo portfólio — ${name}`);
-      const body = encodeURIComponent(`Nome: ${name}\nEmail: ${email}\n\nMensagem:\n${message}\n`);
-
-      const mailto = `mailto:${to}?subject=${subject}&body=${body}`;
-      window.location.href = mailto;
-
-      hint.textContent = "Abrindo seu app de email para enviar a mensagem…";
-    });
   </script>
 </body>
 </html>
