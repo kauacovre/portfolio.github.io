@@ -1,0 +1,47 @@
+/* css/layout.css — Base Layout & Body */
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-mono);
+  font-size: var(--text-base);
+  cursor: none;
+}
+
+/* Noise overlay */
+.noise {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1000;
+  opacity: 0.3;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+}
+
+/* Sections */
+.section {
+  padding: var(--space-2xl) var(--page-px);
+  max-width: calc(var(--max-w) + var(--page-px) * 2);
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Utility */
+.accent       { color: var(--color-accent); }
+.mt-md        { margin-top: var(--space-md); }
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: var(--text-xs);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: var(--space-lg);
+}
+.section-label::after {
+  content: '';
+  width: 60px;
+  height: 1px;
+  background: var(--color-border);
+}

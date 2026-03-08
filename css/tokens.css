@@ -1,0 +1,45 @@
+/* css/tokens.css — Design Tokens */
+:root {
+  /* Colors */
+  --color-bg:        #0a0a0a;
+  --color-surface:   #111111;
+  --color-border:    #1f1f1f;
+  --color-accent:    #c8f542;
+  --color-accent-2:  #42f5c8;
+  --color-text:      #e8e8e8;
+  --color-muted:     #555555;
+
+  /* Typography */
+  --font-display: 'Syne', sans-serif;
+  --font-mono:    'DM Mono', monospace;
+
+  --text-xs:   10px;
+  --text-sm:   12px;
+  --text-base: 14px;
+  --text-md:   16px;
+  --text-lg:   20px;
+  --text-xl:   clamp(28px, 3vw, 44px);
+  --text-hero: clamp(40px, 6vw, 88px);
+
+  /* Spacing */
+  --space-xs:  8px;
+  --space-sm:  16px;
+  --space-md:  24px;
+  --space-lg:  40px;
+  --space-xl:  64px;
+  --space-2xl: 80px;
+
+  /* Layout */
+  --nav-h:     72px;
+  --page-px:   48px;
+  --max-w:     1100px;
+
+  /* Easing */
+  --ease-out:  cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in:   cubic-bezier(0.64, 0, 0.78, 0);
+
+  /* Transitions */
+  --transition-fast:   0.15s ease;
+  --transition-base:   0.25s ease;
+  --transition-slow:   0.5s var(--ease-out);
+}

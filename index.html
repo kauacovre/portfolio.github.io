@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Kauã Covre Martins — Desenvolvedor Web focado em experiências rápidas e bem construídas."/>
+  <title>Kauã Covre — Dev</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <!-- Custom cursor (desktop only) -->
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+  <!-- Noise overlay -->
+  <div class="noise" aria-hidden="true"></div>
+
+  <!-- ===================== NAV ===================== -->
+  <header class="nav" id="nav">
+    <a class="nav__logo" href="#hero">KC.</a>
+    <button class="nav__burger" id="navBurger" aria-label="Menu">
+      <span></span><span></span>
+    </button>
+    <nav class="nav__links" id="navLinks" aria-label="Navegação principal">
+      <a href="#about">Sobre</a>
+      <a href="#projects">Projetos</a>
+      <a href="mailto:kauacovre222@gmail.com">Contato</a>
+    </nav>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="hero">
+    <span class="hero__bg-text" aria-hidden="true">DEV</span>
+    <div class="hero__content">
+      <p class="hero__tag">Disponível para projetos</p>
+      <h1 class="hero__title">
+        Kauã Covre<br>
+        <span class="accent">Martins.</span>
+      </h1>
+      <p class="hero__sub">
+        Desenvolvedor web focado em construir experiências rápidas,<br>
+        responsivas e bem feitas. Código limpo, entrega real.
+      </p>
+      <div class="hero__actions">
+        <a href="#projects" class="btn btn--primary">Ver projetos →</a>
+        <a href="https://github.com/kauacovre" target="_blank" rel="noopener" class="btn btn--ghost">GitHub ↗</a>
+        <a href="https://www.linkedin.com/in/kauã-martins/" target="_blank" rel="noopener" class="btn btn--ghost">LinkedIn ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TICKER ===================== -->
+  <div class="ticker-wrap" aria-hidden="true">
+    <div class="ticker">
+      <div class="ticker__track">
+        <span class="ticker__item">Python</span><span class="ticker__dot"></span>
+        <span class="ticker__item">JavaScript</span><span class="ticker__dot"></span>
+        <span class="ticker__item">Node.js</span><span class="ticker__dot"></span>
+        <span class="ticker__item">HTML5</span><span class="ticker__dot"></span>
+        <span class="ticker__item">CSS3</span><span class="ticker__dot"></span>
+        <span class="ticker__item">MySQL</span><span class="ticker__dot"></span>
+        <span class="ticker__item">Automação</span><span class="ticker__dot"></span>
+        <span class="ticker__item">APIs</span><span class="ticker__dot"></span>
+        <span class="ticker__item">IA</span><span class="ticker__dot"></span>
+
+        <!-- duplicate for seamless loop -->
+        <span class="ticker__item">Python</span><span class="ticker__dot"></span>
+        <span class="ticker__item">JavaScript</span><span class="ticker__dot"></span>
+        <span class="ticker__item">Node.js</span><span class="ticker__dot"></span>
+        <span class="ticker__item">HTML5</span><span class="ticker__dot"></span>
+        <span class="ticker__item">CSS3</span><span class="ticker__dot"></span>
+        <span class="ticker__item">MySQL</span><span class="ticker__dot"></span>
+        <span class="ticker__item">Automação</span><span class="ticker__dot"></span>
+        <span class="ticker__item">APIs</span><span class="ticker__dot"></span>
+        <span class="ticker__item">IA</span><span class="ticker__dot"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section class="about section" id="about">
+    <div class="about__text reveal">
+      <p class="section-label">Sobre mim</p>
+      <h2 class="about__heading">Transformo problemas<br>em produtos funcionais.</h2>
+      <p class="about__body">
+        Desenvolvedor apaixonado por tecnologia e aprendizado contínuo. Busco criar soluções simples, bem organizadas e com ótima experiência de uso.
+      </p>
+      <p class="about__body">
+        Tenho disciplina, curiosidade e foco em entregar valor real — com atenção em performance, responsividade e boas práticas.
+      </p>
+      <a href="assets/docs/CV_DevKauã.pdf" class="btn btn--ghost mt-md" download>↓ Baixar currículo</a>
+    </div>
+
+    <div class="about__stack reveal reveal--delayed">
+      <p class="section-label">Stack</p>
+      <div class="stack-grid">
+        <div class="stack-item"><span class="stack-item__name">Python</span><span class="stack-item__type">Back-end</span></div>
+        <div class="stack-item"><span class="stack-item__name">Node.js</span><span class="stack-item__type">Back-end</span></div>
+        <div class="stack-item"><span class="stack-item__name">MySQL</span><span class="stack-item__type">Banco de dados</span></div>
+        <div class="stack-item"><span class="stack-item__name">JavaScript</span><span class="stack-item__type">Front-end</span></div>
+        <div class="stack-item"><span class="stack-item__name">HTML5</span><span class="stack-item__type">Front-end</span></div>
+        <div class="stack-item"><span class="stack-item__name">CSS3</span><span class="stack-item__type">Front-end</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROJECTS ===================== -->
+  <section class="projects section" id="projects">
+    <p class="section-label reveal">Projetos</p>
+    <div class="projects__grid">
+
+      <article class="project-card reveal">
+        <span class="project-card__num">01</span>
+        <h3 class="project-card__title">Leitor e Resumidor de Vídeo com IA</h3>
+        <p class="project-card__desc">
+          Recebe vídeo ou URL, extrai o áudio e gera um resumo inteligente — ideal para consumir conteúdo longo de forma rápida.
+        </p>
+        <div class="project-card__tags">
+          <span class="tag">Python</span>
+          <span class="tag">API</span>
+          <span class="tag">IA</span>
+        </div>
+        <a href="https://github.com/kauacovre/script" target="_blank" rel="noopener" class="project-card__link">
+          Ver no GitHub <span class="project-card__arrow">→</span>
+        </a>
+      </article>
+
+      <article class="project-card reveal reveal--delayed">
+        <span class="project-card__num">02</span>
+        <h3 class="project-card__title">Landing Page — Alinhamento e Balanceamento</h3>
+        <p class="project-card__desc">
+          Site institucional responsivo com foco em serviços, chamada para ação e contato rápido. Layout limpo e direto.
+        </p>
+        <div class="project-card__tags">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JavaScript</span>
+        </div>
+        <a href="https://github.com/kauacovre/project_S.I" target="_blank" rel="noopener" class="project-card__link">
+          Ver no GitHub <span class="project-card__arrow">→</span>
+        </a>
+      </article>
+
+      <article class="project-card reveal reveal--delayed-2">
+        <span class="project-card__num">03</span>
+        <h3 class="project-card__title">Script de Automação Pós-Formatação</h3>
+        <p class="project-card__desc">
+          Automatiza a configuração inicial de notebooks e computadores após formatação, economizando tempo e reduzindo erros manuais.
+        </p>
+        <div class="project-card__tags">
+          <span class="tag">Batch</span>
+          <span class="tag">PowerShell</span>
+          <span class="tag">Automação</span>
+        </div>
+        <a href="https://github.com/kauacovre/script" target="_blank" rel="noopener" class="project-card__link">
+          Ver no GitHub <span class="project-card__arrow">→</span>
+        </a>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="footer__left">
+      <strong class="accent">Kauã Covre Martins</strong> — Desenvolvedor Web
+      <span class="footer__email">kauacovre222@gmail.com</span>
+    </div>
+    <nav class="footer__links" aria-label="Links sociais">
+      <a href="https://github.com/kauacovre" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/kauã-martins/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:kauacovre222@gmail.com">Email</a>
+    </nav>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/cursor.js" defer></script>
+  <script src="js/nav.js" defer></script>
+  <script src="js/reveal.js" defer></script>
+</body>
+</html>
