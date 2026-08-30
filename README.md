@@ -85,5 +85,7 @@ Acesse: [http://localhost:8000](http://localhost:8000)
 - LinkedIn: [linkedin.com/in/kauã-martins](https://www.linkedin.com/in/kauã-martins/)
 - GitHub: [github.com/kauacovre](https://github.com/kauacovre)
 
+---
 
-* Este conteúdo foi gerado por IA
+
+** Este conteúdo foi gerado por IA
