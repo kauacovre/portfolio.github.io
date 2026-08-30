@@ -84,3 +84,6 @@ Acesse: [http://localhost:8000](http://localhost:8000)
 - Email: kauacovre222@gmail.com
 - LinkedIn: [linkedin.com/in/kauã-martins](https://www.linkedin.com/in/kauã-martins/)
 - GitHub: [github.com/kauacovre](https://github.com/kauacovre)
+
+
+* Este conteúdo foi gerado por IA
